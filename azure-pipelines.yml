@@ -3,13 +3,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  dotnetSdkVersion: '6.x'
+  dotnetSdkVersion: '8.x'
 
 steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-  inputs:
-    version: '$(dotnetSdkVersion)'
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
